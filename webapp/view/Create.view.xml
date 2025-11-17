@@ -13,11 +13,19 @@
                     emptySpanL="1" emptySpanM="1"
                     columnsL="1" columnsM="1">
  
-                    <Label text="Receiving Plant:" required="true"/>
-                    <Input id="inpReceivingPlant" value="{Order>/ReceivingPlant}" showValueHelp="true"/>
- 
-                    <Label text="Delivering Plant:" required="true"/>
-                    <Input id="inpDeliveringPlant" value="{Order>/DeliveringPlant}" showValueHelp="true"/>
+                   <!-- Receiving Plant -->
+        <Label text="Receiving Plant:" required="true"/>
+        <Input id="inpReceivingPlant"
+               value="{/Order/ReceivingPlant}"
+               required="true"
+               showValueHelp="true"/>
+
+        <!-- Delivering Plant -->
+        <Label text="Delivering Plant:" required="true"/>
+        <Input id="inpDeliveringPlant"
+               value="{/Order/DeliveringPlant}"
+               required="true"
+               showValueHelp="true"/>
  
                 </f:SimpleForm>
             </Panel>
