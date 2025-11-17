@@ -1,0 +1,38 @@
+
+{ 
+        "Master":[
+            {
+                "DeliveringPlant":"D1",
+                "ProdId":"P1",
+                "ProdDesc":"Sample 1",
+                "Price":"100",
+                "Stock":"5"
+            }
+        ],
+        "Order":[
+                    {
+                "OrdNum":"1",
+                "CreateDate":"1",
+                    "ReceivingPlant":"R1",
+                    "DeliveringPlant":"D1",
+                    "Status":""
+                },
+                {
+                "OrdNum":"2",
+                "CreateDate":"2",
+                    "ReceivingPlant":"2",
+                    "DeliveringPlant":"2",
+                    "Status":""
+                }
+            ],
+        "ProductOrder":[
+        {
+            "OrdNum":"1",
+            "ProdId":"P1",
+            "ProdDesc":"sample",
+            "Qty":"1",
+            "Price":"100"
+        }
+                   
+                        ]
+}

@@ -14,6 +14,12 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.19.5",
       "toolsId": "8d328316-fdd1-46b0-92c6-7d8b1e532ea7"
+    },
+    "dataSources": {
+      "local":{
+        "uri":"localStorage/mainStorage/products.json",
+        "type": "JSON"
+      }
     }
   },
   "sap.ui": {
@@ -51,7 +57,11 @@
         "settings": {
           "bundleName": "ordermanagementgrp1.i18n.i18n"
         }
-      }
+      },
+        "productModel":{
+          "type":"sap.ui.model.json.JSONModel",
+          "dataSource": "local"
+        }
     },
     "resources": {
       "css": [
@@ -82,19 +92,27 @@
         },
         {
           "name": "Detail",
-          "pattern": "Detail",
+          "pattern": "Detail{id}",
           "target":"Detail"
+        },
+        {
+          "name": "Create",
+          "pattern": "Create",
+          "target":"Create"
         }
-
       ],
       "targets": {
         "TargetMainView": {
           "id": "MainView",
           "name": "MainView"
         },
-        "Detail": {
+         "Detail": {
           "id": "Detail",
           "name": "Detail"
+        },
+         "Create": {
+          "id": "Create",
+          "name": "Create"
         }
       }
     },
