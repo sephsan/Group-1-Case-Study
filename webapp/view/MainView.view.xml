@@ -1,7 +1,123 @@
-<mvc:View controllerName="ordermanagementgrp1.controller.MainView"
+<mvc:View xmlns:table="sap.ui.table" controllerName="ordermanagementgrp1.controller.MainView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    <Button text="Route Me" press="toDetailPage"></Button>
+    <HBox    >
+    <Label text="Order Number"></Label>
+    <Input id="iOrdNum" ></Input>
+    </HBox>
+    <VBox >
+        <Table items="{/Order}" >
+            <columns>
+            <Column >
+                <Text text="Id"></Text>
+            </Column>   
+            <Column >
+                <Text text="Creation Date"></Text>
+            </Column>  
+            <Column >
+                <Text text="Receiving Plant"></Text>
+            </Column> 
+            <Column >
+                <Text text="Delivering Plant"></Text>
+            </Column>   
+             <Column >
+                <Text text="Status"></Text>
+            </Column>   
+        </columns>
+        <items>
+        <ColumnListItem type="Navigation" press="toDetailPage(${OrdNum})">
+            <cells  >
+                <Text text="{OrdNum}"></Text>
+            </cells>
+                        <cells>
+                <Text text="{ReceivingPlant}" ></Text>
+            </cells>
+             <cells>
+                <Text text="1"></Text>
+            </cells>
+                        <cells>
+                <Text text="sample" ></Text>
+            </cells>
+        </ColumnListItem>       
+        </items>
+        </Table>
+    </VBox>
+    <Button id="btn1"></Button>
+     <VBox >
+        <Table items="{/Master}" >
+            <columns>
+            <Column >
+                <Text text="Order Number"></Text>
+            </Column>   
+            <Column >
+                <Text text="Product Id"></Text>
+            </Column>  
+            <Column >
+                <Text text="Product Description"></Text>
+            </Column> 
+            <Column >
+                <Text text="Quantity"></Text>
+            </Column>   
+             <Column >
+                <Text text="Price per Quantity"></Text>
+            </Column>   
+        </columns>
+        <items>
+        <ColumnListItem type="Navigation" press="toDetailPage(${OrdNum})">
+            <cells  >
+                <Text text="{OrdNum}"></Text>
+            </cells>
+                        <cells>
+                <Text text="{ProdId}" ></Text>
+            </cells>
+             <cells>
+                <Text text="1"></Text>
+            </cells>
+                        <cells>
+                <Text text="sample" ></Text>
+            </cells>
+        </ColumnListItem>       
+        </items>
+        </Table>
+    </VBox>
+     <Button id="btn"></Button>
+     <VBox >
+        <Table items="{/Master}" >
+            <columns>
+            <Column >
+                <Text text="DeliveringPlant"></Text>
+            </Column>   
+            <Column >
+                <Text text="Product Id"></Text>
+            </Column>  
+            <Column >
+                <Text text="Product Description"></Text>
+            </Column> 
+            <Column >
+                <Text text="Price"></Text>
+            </Column>   
+             <Column >
+                <Text text="Stock"></Text>
+            </Column>   
+        </columns>
+        <items>
+        <ColumnListItem type="Navigation" press="toDetailPage(${OrdNum})">
+            <cells  >
+                <Text text="{DeliveringPlant}"></Text>
+            </cells>
+                        <cells>
+                <Text text="{ProdId}" ></Text>
+            </cells>
+             <cells>
+                <Text text="{}"></Text>
+            </cells>
+                        <cells>
+                <Text text="sample" ></Text>
+            </cells>
+        </ColumnListItem>       
+        </items>
+        </Table>
+    </VBox>
     </Page>
 </mvc:View>

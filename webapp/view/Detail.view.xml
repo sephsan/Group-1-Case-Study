@@ -1,6 +1,7 @@
 <mvc:View controllerName="ordermanagementgrp1.controller.Detail"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="pageDetail" title="{i18n>title}">
+    <Page id="page1" title="{i18n>title}">
+    <Label id="lbl" text="Detail"></Label>
     </Page>
 </mvc:View>
