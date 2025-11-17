@@ -5,6 +5,10 @@ sap.ui.define([
 
     return Controller.extend("ordermanagementgrp1.controller.MainView", {
         onInit() {
+        },
+        toDetailPage:function(){
+            var oRoute = this.getOwnerComponent().getRouter();
+            oRoute.navTo("", { id :"111" });
         }
     });
 });

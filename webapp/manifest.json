@@ -79,12 +79,22 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "Detail",
+          "pattern": "Detail",
+          "target":"Detail"
         }
+
       ],
       "targets": {
         "TargetMainView": {
           "id": "MainView",
           "name": "MainView"
+        },
+        "Detail": {
+          "id": "Detail",
+          "name": "Detail"
         }
       }
     },
