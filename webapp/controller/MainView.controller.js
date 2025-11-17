@@ -24,6 +24,7 @@ sap.ui.define([
 
             var oRoute = this.getOwnerComponent().getRouter();
             oRoute.navTo("Create", { id :id });
-        }
+        },
+        
     });
 });
